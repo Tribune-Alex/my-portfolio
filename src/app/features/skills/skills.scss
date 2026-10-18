@@ -1,0 +1,136 @@
+
+:host {
+  display: block;
+}
+
+.skills {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 32px 120px;
+}
+
+.section-label {
+  color: #00e676;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 800;
+  letter-spacing: -3px;
+
+  span {
+    color: #d4af37;
+  }
+}
+
+.skills-description {
+  margin-bottom: 40px;
+  color: #999;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.skill-card {
+  position: relative;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 230, 118, 0.16);
+  border-radius: 10px;
+
+  // Матированное стекло
+  background: rgba(8, 18, 13, 0.48);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 8px 28px rgba(0, 0, 0, 0.18);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 230, 118, 0.65);
+    background: rgba(8, 24, 15, 0.58);
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 8px 30px rgba(0, 230, 118, 0.1);
+  }
+
+  h2 {
+    margin: 14px 0 12px;
+    color: #d4af37;
+    font-size: 21px;
+  }
+
+  p {
+    margin: 0;
+    color: #c0c0c0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+.skill-logo {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(0, 230, 118, 0.12));
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+
+  .skill-card:hover & {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 7px rgba(0, 230, 118, 0.3));
+  }
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    padding: 80px 6%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card,
+  .skill-logo {
+    transition: none;
+  }
+
+  .skill-card:hover,
+  .skill-card:hover .skill-logo {
+    transform: none;
+  }
+}

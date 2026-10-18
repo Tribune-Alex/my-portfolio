@@ -1,0 +1,176 @@
+<section class="resume" id="about">
+    <header class="resume-header">
+        <div class="resume-photo">
+            <img src="/images/mypicture/mypicture.png" alt="Aleksi Todua" />
+        </div>
+        <div class="resume-intro">
+            <p class="section-label">{{ 'ABOUT.LABEL' | translate }}</p>
+            <h1>
+                {{ 'ABOUT.FIRST_NAME' | translate }}
+                <span>{{ 'ABOUT.LAST_NAME' | translate }}</span>
+            </h1>
+            <h2>{{ 'ABOUT.ROLE' | translate }}</h2>
+            <p class="resume-location">{{ 'ABOUT.LOCATION' | translate }}</p>
+
+            <p>
+                <strong>{{ 'ABOUT.AGE_LABEL' | translate }}:</strong>
+                {{ age }} {{ 'ABOUT.AGE_SUFFIX' | translate }}
+            </p>
+
+
+            <p class="resume-summary">
+                {{ 'ABOUT.SUMMARY' | translate }}
+            </p>
+
+            <div class="resume-tech">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>SCSS</span>
+            </div>
+        </div>
+        <button class="download-cv" type="button" (click)="downloadCv()">
+            <span>↓</span>
+            {{ 'ABOUT.DOWNLOAD_CV' | translate }}
+        </button>
+    </header>
+
+    <div class="resume-divider"></div>
+
+    <section class="resume-section">
+        <h2>{{ 'ABOUT.EXPERIENCE' | translate }}</h2>
+
+        <div class="resume-entry">
+            <div class="resume-date">2020 — Present</div>
+            <div class="resume-entry-content">
+                <h3>{{ 'ABOUT.MANAGER' | translate }}</h3>
+                <p class="resume-company">{{ 'ABOUT.COMPANY' | translate }}</p>
+                <p>{{ 'ABOUT.WORK_DESCRIPTION' | translate }}</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="resume-divider"></div>
+
+    <section class="resume-section">
+        <h2>{{ 'ABOUT.EDUCATION' | translate }}</h2>
+
+        <div class="resume-entry">
+            <div class="resume-date">{{ 'ABOUT.UNIVERSITY' | translate }}</div>
+            <div class="resume-entry-content">
+                <h3>{{ 'ABOUT.UNIVERSITY_NAME' | translate }}</h3>
+                <p>{{ 'ABOUT.UNIVERSITY_FIELD' | translate }}</p>
+            </div>
+        </div>
+
+        <div class="resume-entry">
+            <div class="resume-date">{{ 'ABOUT.IT_EDUCATION' | translate }}</div>
+            <div class="resume-entry-content">
+                <h3>{{ 'ABOUT.ACADEMY' | translate }}</h3>
+                <p>{{ 'ABOUT.ACADEMY_FIELD' | translate }}</p>
+            </div>
+        </div>
+
+        <div class="resume-entry">
+            <div class="resume-date">{{ 'ABOUT.SCHOOL' | translate }}</div>
+            <div class="resume-entry-content">
+                <h3>{{ 'ABOUT.SCHOOL_NAME' | translate }}</h3>
+                <p>{{ 'ABOUT.SCHOOL_LOCATION' | translate }}</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="resume-divider"></div>
+
+    <section class="resume-section">
+        <h2>{{ 'ABOUT.PROJECT' | translate }}</h2>
+
+        <div class="resume-entry">
+            <div class="resume-date">{{ 'ABOUT.PROJECT_TYPE' | translate }}</div>
+            <div class="resume-entry-content">
+                <h3>STEP TRAINS</h3>
+                <p>{{ 'ABOUT.PROJECT_DESCRIPTION' | translate }}</p>
+
+                <a class="resume-link" href="https://angular-final-project-jzmjuid2u-step-trains.vercel.app"
+                    target="_blank" rel="noopener noreferrer">
+                    {{ 'ABOUT.VIEW_PROJECT' | translate }}
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="resume-divider"></div>
+
+    <section class="resume-section languages-section">
+        <h2>{{ 'ABOUT.LANGUAGES' | translate }}</h2>
+
+        <div class="languages-list">
+            <div class="language-item">
+                <span class="language-name">{{ 'ABOUT.GEORGIAN' | translate }}</span>
+                <span class="language-level">{{ 'ABOUT.NATIVE' | translate }}</span>
+            </div>
+
+            <div class="language-item">
+                <span class="language-name">{{ 'ABOUT.RUSSIAN' | translate }}</span>
+                <span class="language-level">{{ 'ABOUT.FLUENT' | translate }}</span>
+            </div>
+
+            <div class="language-item">
+                <span class="language-name">{{ 'ABOUT.ENGLISH' | translate }}</span>
+                <span class="language-level">{{ 'ABOUT.FLUENT' | translate }}</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="resume-divider"></div>
+
+    <section class="resume-section certificates-section">
+        <p class="section-label">{{ 'ABOUT.ACHIEVEMENTS' | translate }}</p>
+        <h2>{{ 'ABOUT.CERTIFICATES' | translate }}</h2>
+
+        <p class="certificates-intro">
+            {{ 'ABOUT.CERTIFICATES_INTRO' | translate }}
+        </p>
+
+        <div class="certificates-grid">
+            <button type="button" class="certificate-item"
+                (click)="openCertificate('/images/certificates/frontend.jpg')"
+                [attr.aria-label]="'ABOUT.VIEW_CERTIFICATE' | translate">
+                <img src="/images/certificates/frontend.jpg" alt="IT Step Academy certificate" loading="lazy" />
+                <span>IT Step Academy</span>
+                <small>{{ 'ABOUT.VIEW_CERTIFICATE' | translate }}</small>
+            </button>
+
+            <button type="button" class="certificate-item"
+                (click)="openCertificate('/images/certificates/frontendmodules.jpg')"
+                [attr.aria-label]="'ABOUT.VIEW_CERTIFICATE' | translate">
+                <img src="/images/certificates/frontendmodules.jpg" alt="IT Step Academy certificate" loading="lazy" />
+                <span>IT Step Academy</span>
+                <small>{{ 'ABOUT.VIEW_CERTIFICATE' | translate }}</small>
+            </button>
+
+            <button type="button" class="certificate-item"
+                (click)="openCertificate('/images/certificates/certiport.jpg')"
+                [attr.aria-label]="'ABOUT.VIEW_DOCUMENT' | translate">
+                <img src="/images/certificates/certiport.jpg" alt="Certiport certificate" loading="lazy" />
+                <span>Certiport Certificate</span>
+                <small>{{ 'ABOUT.VIEW_DOCUMENT' | translate }}</small>
+            </button>
+        </div>
+    </section>
+
+    @if (selectedCertificate) {
+    <div class="certificate-lightbox" (click)="closeCertificate()" (keydown.escape)="closeCertificate()"
+        role="presentation">
+
+        <button type="button" class="lightbox-close" [attr.aria-label]="'ABOUT.CLOSE_CERTIFICATE' | translate"
+            (click)="closeCertificate()">
+            &times;
+        </button>
+
+        <img class="certificate-full" [src]="selectedCertificate" [alt]="'ABOUT.CERTIFICATE_ALT' | translate"
+            (click)="$event.stopPropagation()" />
+    </div>
+    }
+</section>

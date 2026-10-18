@@ -1,0 +1,23 @@
+
+<section class="hero" id="home">
+  <p class="greeting">{{ 'HERO.GREETING' | translate }}</p>
+
+  <h1>{{ 'HERO.NAME' | translate }}<span>.</span></h1>
+
+  <h2>{{ 'HERO.ROLE' | translate }}</h2>
+
+  <p class="description">
+    {{ 'HERO.DESCRIPTION' | translate }}
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn btn-primary" routerLink="/projects">
+      {{ 'HERO.VIEW_PROJECTS' | translate }}
+    </a>
+
+    <a class="btn btn-outline" routerLink="/contact">
+      {{ 'NAV.CONTACT' | translate }}
+    </a>
+  </div>
+</section>
+
